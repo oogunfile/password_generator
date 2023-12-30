@@ -9,7 +9,8 @@ digits= '0123456789'
 upper_case='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
    
-
+#adding the various inclusions to  make the password
+#this is based on the users input. Defaul is false
 def password_combinations(upper, numbers, specialChr):
     combo = basic_lowercase
     if numbers:
@@ -25,7 +26,7 @@ def password_combinations(upper, numbers, specialChr):
 
 
 
-
+#using randomchoice based on the length of the password
 def generate_password(length=20, upper= False, num =False, specialC = False ):
     password=[]
     combo_p = password_combinations(upper, num, specialC)
