@@ -13,13 +13,10 @@ upper_case='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 def password_combinations(upper, numbers, specialChr):
     combo = basic_lowercase
     if numbers:
-        print('numbers= ', numbers)
         combo += digits
     if specialChr:
-        print('specialChar= ', special_char)
         combo += special_char
     if upper:
-        print('upper= ', upper)
         combo += upper_case
     return combo
 
