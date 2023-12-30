@@ -7,8 +7,7 @@ basic_lowercase = 'abcdefghijklmnopqrstuvwxyz'
 special_char='!@#$%^&*()_+'
 digits= '0123456789'
 upper_case='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-   
+  
 #adding the various inclusions to  make the password
 #this is based on the users input. Defaul is false
 def password_combinations(upper, numbers, specialChr):
@@ -24,8 +23,6 @@ def password_combinations(upper, numbers, specialChr):
         combo += upper_case
     return combo
 
-
-
 #using randomchoice based on the length of the password
 def generate_password(length=20, upper= False, num =False, specialC = False ):
     password=[]
@@ -34,8 +31,7 @@ def generate_password(length=20, upper= False, num =False, specialC = False ):
         pword = random.choice(combo_p) #choosing characters from the combined set
         password.append(pword) 
     return ''.join(password)
-    
-    
+
 #Prompting the users with the following questions about how the password should be
 def password_gen_questions():
     while True:
@@ -52,10 +48,6 @@ def password_gen_questions():
                 break
         except:
             print("Not a valid response")
-            
-
-
-
 
 ##Main menu runs indefinitely until user exits by entering "2"
 def mainmenu():
@@ -70,8 +62,6 @@ def mainmenu():
             password_gen_questions()
         else:
             print('Please enter a correct value, either 1 0r 2')
-
-
     
 if __name__ == "__main__":
     mainmenu()
